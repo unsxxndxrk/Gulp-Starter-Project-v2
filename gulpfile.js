@@ -3,7 +3,7 @@ var
 	sass         = require('gulp-sass'),
 	browserSync  = require('browser-sync'),
 	autoprefixer = require('gulp-autoprefixer'),
-	notify       = require("gulp-notify"),
+	notify       = require('gulp-notify'),
 	imagemin     = require('gulp-imagemin'), 
     pngquant     = require('imagemin-pngquant'), 
     cache        = require('gulp-cache');
@@ -58,6 +58,9 @@ gulp.task('build', gulp.series('clear', 'img', function(cb) {
 
     var buildFonts = gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
+
+    var buildLibs = gulp.src('app/libs/**/*')
+    .pipe(gulp.dest('dist/libs'))
 
     var buildJs = gulp.src([
         'app/js/**/*'
