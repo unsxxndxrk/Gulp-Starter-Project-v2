@@ -1,11 +1,14 @@
+@import "vars";
+
 body {
-	font-family: 'Roboto Slab', sans-serif;
-    color: #333;
-    line-height: 1.75;
+	font-family: 'Bender', sans-serif;
+    color: $text;
+    line-height: 1.5em;
+    background: $main_bg;
 }
 
 .container {
-	width: 1190px;
+	width: $container;
     margin: 0 auto;
 }
 
@@ -59,10 +62,18 @@ body {
 
 .flex-column { flex-direction: column; }
 
-.img-responsive {
+.overflow-hidden { overflow: hidden; }
+
+.img-w-100 {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+
+.img-h-100 {
+    display: block;
+    max-height: 100%;
+    width: auto;
 }
 
 div, a, span, input, textarea, button { box-sizing: border-box; }
