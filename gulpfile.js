@@ -7,7 +7,7 @@ var
 	imagemin     = require('gulp-imagemin'), 
     pngquant     = require('imagemin-pngquant'), 
     uglify       = require('gulp-uglify-es').default,
-    minCSS       = require('gulp-cssmin'),
+    cleanCSS     = require('gulp-clean-css'),
     cache        = require('gulp-cache');
 
 // localhost and autoreaload
@@ -24,6 +24,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
 		.pipe(sass({outputStyle: 'expanded'}).on("error", notify.onError()))
 		.pipe(autoprefixer(['last 15 versions']))
+		.pipe(cleanCSS())
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true}));
 });
@@ -56,7 +57,6 @@ gulp.task('build', gulp.series('clear', 'img', function(cb) {
     var buildCss = gulp.src([
         'app/css/**/*'
         ])
-    .pipe(minCSS())
     .pipe(gulp.dest('dist/css'))
 
     var buildFonts = gulp.src('app/fonts/**/*')
