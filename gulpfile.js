@@ -11,13 +11,14 @@ var
     cache        = require('gulp-cache');
 
 // localhost and autoreaload
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function(done) {
 	browserSync({
 		server: {
 			baseDir: 'app'
 		},
 		notify: false
 	});
+	done();
 });
 
 gulp.task('sass', function() {
