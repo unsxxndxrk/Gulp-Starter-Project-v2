@@ -1,12 +1,13 @@
 {
-  "name": "name",
+  "name": "gulp-starter-project",
   "version": "1.0.0",
   "description": "desctiption",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build"
   },
-  "author": "Selin Corvin",
+  "author": "Zaviryukha Igor",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",
