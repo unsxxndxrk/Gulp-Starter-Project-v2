@@ -1,7 +1,7 @@
 {
   "name": "gulp-starter-project",
   "version": "1.0.0",
-  "description": "desctiption",
+  "description": "A simple Gulp starter project for developing small complexity sites. Features: BrowseSync, Autoreload, Scss preprocessor, Autoprefixer, Notifycator, Image minifier and css/js minifier",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
